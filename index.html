@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Media/logo.png" alt="Logo Here" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SPECIFIACTION</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <H1>SOUND<br>THAT<br>YOU<br>&#10084;</H1>
+            </div>
+
+            <div class="right">
+                <p>Click Here To Play</p>
+                <img src="Media/play.png" alt="Play/Pause" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="song">
+        <source src="Media/Hind ka Sitar.mp3" >
+    </audio>
+
+<script>
+    var song = document.getElementById("song");
+    var icon = document.getElementById("icon");
+    icon.onclick=function(){
+        if(song.paused){
+            song.play();
+            icon.src="Media/pause.png";
+        }
+        else{
+            song.pause();
+            icon.src="Media/play.png";
+        }
+    }
+</script>
+
+
+</body>
+</html>
